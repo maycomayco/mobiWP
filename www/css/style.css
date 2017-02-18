@@ -1,0 +1,6 @@
+body{color: #666;}
+h1,h2,h3,h4,h5,h6{color: #333;}
+h3.post-title{white-space: normal;}
+.imagenSingle img{max-width: 100%;height: auto;}
+.the-excerpt p{white-space: normal;font-size: 0.8em;}
+.meta .tiempo{font-size: 0.65em;color: #666;}

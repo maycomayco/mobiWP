@@ -1,0 +1,22 @@
+<div ng-controller="MainCtrl">
+	<ion-view view-title="Articulos">
+		<ion-content>
+			<div class="list">
+				<a href="#/single/{{post.id}}" class="item item-thumbnail-left" ng-repeat="post in posts">
+					<img ng-src="{{ post.imagenList }}" ng-if="post.imagenList.indexOf('http')===0">
+					<!-- <h3 class="post-title">{{post.title.rendered}}</h3> -->
+					<h2 class="post-title">{{post.title.rendered}}</h2>
+					<!-- <h6>{{post.excerpt.rendered}}</h6> -->
+					<div class="meta">
+						<span am-time-ago="post.date | amParse:'YYYY.MM.DD HH:mm:ss'" class="tiempo"></span>
+					</div>
+					<span ng-bind-html="post.excerpt.rendered" class="htmlContent the-excerpt"></span>
+					<!-- <p><span am-time-ago="post.created_utc | amFromUnix">{{ post.domain}}</p> -->
+				</a>
+			</div>
+			<div class="padding">
+				<a href="#" class="button button-block button-positive" ng-click="loadMoreButton()">Cargar más</a>
+			</div>
+		</ion-content>
+	</ion-view>
+</div>

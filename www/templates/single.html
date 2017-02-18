@@ -1,0 +1,13 @@
+<div ng-controller="SingleCtrl">
+	<ion-view view-title="{{post.title.rendered}}">
+		<ion-content>
+			<div class="imagenSingle">
+				<img ng-src="{{ post.imagenSingle }}" ng-if="post.imagenSingle.indexOf('http')===0">
+			</div>
+			<div class="padding">
+				<h3>{{post.title.rendered}}</h3>
+				<span ng-bind-html="post.content.rendered" class="htmlContent"></span>
+			</div>
+		</ion-content>
+	</ion-view>
+</div>
